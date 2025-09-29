@@ -1,4 +1,5 @@
 import express from 'express';
+import planetsRouter from './routes/planets/planets.router.js';
 
 const app = express();
 
@@ -9,5 +10,7 @@ app.get('/hello', (req, res) => {
         'greetings': 'Hello! :)',
     });
 });
+
+app.use(planetsRouter);
 
 export default app;
